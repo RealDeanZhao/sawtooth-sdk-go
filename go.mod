@@ -1,4 +1,4 @@
-module github.com/hyperledger/sawtooth-sdk-go
+module github.com/RealDeanZhao/sawtooth-sdk-go
 
 require (
 	cloud.google.com/go v0.28.0 // indirect
