@@ -39,14 +39,14 @@ func NewSecp256k1PrivateKey(private_key []byte) PrivateKey {
 }
 
 // PemToSecp256k1PrivateKey converts a PEM string to a private key.
-func PemToSecp256k1PrivateKey(pem string, password string) (*Secp256k1PrivateKey, error) {
-	priv, err := pemToPriv(pem, password)
-	if err != nil {
-		return nil, err
-	}
+// func PemToSecp256k1PrivateKey(pem string, password string) (*Secp256k1PrivateKey, error) {
+// 	priv, err := pemToPriv(pem, password)
+// 	if err != nil {
+// 		return nil, err
+// 	}
 
-	return &Secp256k1PrivateKey{priv}, nil
-}
+// 	return &Secp256k1PrivateKey{priv}, nil
+// }
 
 // Returns the string "secp256k1".
 func (self *Secp256k1PrivateKey) GetAlgorithmName() string {
@@ -172,14 +172,14 @@ func doSHA256(input []byte) []byte {
 	return hash.Sum(nil)
 }
 
-func pemToPriv(pem string, password string) ([]byte, error) {
-	pemlen := len(pem)
-	priv, _, err := loadPemKey(pem, pemlen, password)
-	if err != nil {
-		return nil, err
-	}
-	return hex.DecodeString(priv)
-}
+// func pemToPriv(pem string, password string) ([]byte, error) {
+// 	pemlen := len(pem)
+// 	priv, _, err := loadPemKey(pem, pemlen, password)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return hex.DecodeString(priv)
+// }
 
 // ---
 
